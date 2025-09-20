@@ -1,42 +1,86 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/*Navbar Styles*/
+.navbar {
+    background: var(--color-bg-secondary);
+    margin: .75rem;
+    padding: .4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.25rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.navbar__logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    margin-left: .5rem;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.navbar__user {
+    margin-right: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navbar__user-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-brand-primary);
 }
+.navbar__user-info {
+    margin-right: .5rem;
+}
+/*Dashboard Styles*/
+.section-container {
+    background: var(--color-bg-secondary);
+    margin: .5rem .75rem;
+    border-radius: 1.25rem;
+    padding: .5rem;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
 
-.card {
-  padding: 2em;
 }
+.section-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.create-project-btn {
+    background: var(--color-brand-primary);
+    color: var(--color-bg-primary);
+    padding: .5rem 1rem;
+    display: flex;
+    gap: .5rem;
+    border-radius: .75rem;
+    margin: 1rem;
+}
+.create-icon {
+    width: 1rem;
+}
+.create-project-btn:hover {
+    cursor: pointer;
+    background: var(--color-brand-primary-hover);
+}
+.settings-icon {
+    width: 1.75rem;
+    margin-right: .5rem;
 
-.read-the-docs {
-  color: #888;
+}
+.settings-icon:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.welcome-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 17rem auto;
+
+}
+p > span {
+    margin: 0 .5rem;
+    color: var(--color-brand-primary);
+    font-weight: 400;
 }

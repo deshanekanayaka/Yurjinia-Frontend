@@ -40,6 +40,14 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
   return (
     <div
       onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick()
+        }
+      }}
       className="group relative cursor-pointer rounded-2xl border border-border-soft bg-white p-4 shadow-sm transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-md"
     >
       <div

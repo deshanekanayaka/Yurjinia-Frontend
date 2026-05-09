@@ -95,7 +95,7 @@ export const useProjectStore = create<ProjectStore>()(
                                     ...((p as any).tickets ?? []),
                                     {
                                         ...ticket,
-                                        id: `t${Date.now()}`,
+                                        id: `t${crypto.randomUUID()}`,
                                         createdAt: new Date().toISOString(),
                                     },
                                 ],

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@source "../src";
+
+:root {
+  --radius: 0.625rem;
+  --bg-secondary: #ECF2FF;
+  --brand: #155DFC;
+  --brand-hover: #0346DB;
+  --brand-accent: #14B8A6;
+  --brand-accent-light: #62FC75;
+  --text-primary: #000000;
+  --text-secondary: #434343;
+  --border-soft: #EBECF0;
+  --status-critical-bg: #FEECEB;
+  --status-critical-text: #FA0202;
+  --status-high-bg: #FFF0E1;
+  --status-high-text: #7D3E00;
+  --status-medium-bg: #FFF8D5;
+  --status-medium-text: #FF7B00;
+  --status-low-bg: #E3FDEB;
+  --status-low-text: #016A30;
+}
+
+@theme inline {
+  /* Spacing / radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+  --radius-2xl: calc(var(--radius) + 12px);
+
+  /* Brand colours */
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-light: var(--brand-accent-light);
+
+  /* Backgrounds */
+  --color-bg-secondary: var(--bg-secondary);
+
+  /* Text */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+
+  /* Borders */
+  --color-border-soft: var(--border-soft);
+
+  /* Status — background tokens */
+  --color-status-critical-bg: var(--status-critical-bg);
+  --color-status-high-bg: var(--status-high-bg);
+  --color-status-medium-bg: var(--status-medium-bg);
+  --color-status-low-bg: var(--status-low-bg);
+
+  /* Status — text tokens */
+  --color-status-critical-text: var(--status-critical-text);
+  --color-status-high-text: var(--status-high-text);
+  --color-status-medium-text: var(--status-medium-text);
+  --color-status-low-text: var(--status-low-text);
+
+  /* Typography */
+  --font-sans: "Montserrat", system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border-soft);
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    font-family: "Montserrat", system-ui, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+}
